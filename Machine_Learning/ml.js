@@ -230,9 +230,9 @@ function draw() {
     background(68, 137, 228);
     textSize(64);
     fill(0, 255, 0);
-    text(llabel, 10, 530);
-    fill(confidence * 255, confidence * 255, confidence * 255);
-    text(confidence, 60, 530);
+    text(llabel, 10, 535);
+    fill(confidence / 100 * 255, confidence / 100 * 255, confidence / 100 * 255);
+    text(confidence, 60, 535);
 
     //FLIPPAM IMAGINEA
     translate(video.width, 0);
