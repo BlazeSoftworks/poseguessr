@@ -35,6 +35,10 @@ app.get('/model.weights.bin', (req, res) => {
     res.sendFile(path.join(__dirname + '/Machine_Learning/Model/model.weights.bin'));
 })
 
+app.get('/wall.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname + '/wall.jpg'));
+})
+
 // app.post('/upload', (req, res) => {
 //     if (req.files) {
 //         let file = req.files;
