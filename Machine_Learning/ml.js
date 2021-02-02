@@ -201,23 +201,6 @@ function setup() {
         alertify.success('Modelul a fost resetat!');
     }
 
-    // let co = document.getElementById("checkOut");
-    // co.onchange = () => {
-    //     if (!co.checked)
-    //         max = 6;
-    //     else
-    //         max = 3;
-
-    //     let options = {
-    //         inputs: 34,
-    //         outputs: (co.checked) ? 3 : 6,
-    //         task: 'classification',
-    //         debug: true
-    //     }
-
-    //     brain = ml5.neuralNetwork(options);
-    // }
-
     //POSENET
     poseNet = ml5.poseNet(video, () => { });
     poseNet.on('pose', gotPoses);
@@ -246,9 +229,10 @@ function setup() {
 function draw() {
     background(68, 137, 228);
     textSize(64);
-    fill(255, 0, 255);
+    fill(0, 255, 0);
     text(llabel, 10, 530);
-    text(confidence, 50, 530);
+    fill(confidence * 255, confidence * 255, confidence * 255);
+    text(confidence, 60, 530);
 
     //FLIPPAM IMAGINEA
     translate(video.width, 0);
